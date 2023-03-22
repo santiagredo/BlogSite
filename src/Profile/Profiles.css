@@ -1,0 +1,183 @@
+@import url('../variables.css');
+
+.profile_details_container{
+    width: 100%;
+    color: var(--vanilla);
+}
+
+.profile_options_buttons_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile_options_buttons_container, .profile_details_container h1, .profile_details_container h3{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.profile_options_buttons_container button{
+    width: 40vw;
+    height: 3vh;
+}
+
+.delete_confirmation_buttons_container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.delete_confirmation_buttons_container button{
+    width: 40vw;
+    height: 3vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.edit_profile_container, .edit_profile_container form{
+    width: 100%;
+    color: var(--vanilla);
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.username_input, .fullname_input, .email_input, .select_role{
+    color: var(--vanilla);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border: 1px solid var(--vanilla);
+    border-radius: 4px;
+    padding: 1%;
+}
+
+.edit_profile_buttons_container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.edit_profile_buttons_container button{
+    width: 45vw;
+    height: 3vh;
+}
+
+.administration_panel_container{
+    width: 100%;
+    margin-top: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid var(--orange);
+}
+
+.toggle_administration_panel_button_container{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.toggle_administration_panel_button_container button{
+    width: 95vw;
+    height: 3vh;
+}
+
+
+
+/* ProfilesGenerator */
+.profiles_generator_container, .profiles_generator_container form{
+    color: var(--vanilla);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.profiles_generator_container form h3, .profiles_generator_container form input, .profiles_generator_container form select{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.profiles_generator_container form button{
+    width: 100%;
+    height: 3vh;
+}
+
+
+
+/* ProfilesManagement */
+.manage_profiles_container{
+    width: 100%;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--orange);
+}
+
+.manage_profiles_container .show_profiles_button{
+    width: 100%;
+    height: 3vh;
+}
+
+.manage_profiles_container .show_profiles_button, .manage_profiles_container h1, .manage_profiles_container div{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.profile_details_container{
+    color: var(--vanilla);
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--orange);
+}
+
+.individual_profile_options_buttons_container, .delete_individual_profile_confirmation_buttons_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.individual_profile_options_buttons_container button, .delete_individual_profile_confirmation_buttons_container button{
+    width: 45vw;
+    height: 3vh;
+}
+
+.delete_individual_profile_container{
+    text-align: center;
+}
+
+.edit_individual_profile_container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit_individual_profile_container form label, .edit_individual_profile_container form input, .edit_individual_profile_container form select{
+    color: var(--vanilla);
+}
+
+.edit_individual_profile_container form input, .edit_individual_profile_container form select{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border: 1px solid var(--vanilla);
+    border-radius: 4px;
+    padding: 1%;
+}
+
+.edit_individual_profile_container button{
+    width: 100%;
+    height: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+
+
+@media (min-width: 768px) {
+    .delete_confirmation_buttons_container button{
+        font-size: 1.5rem;
+        height: 4vh;
+    }
+}

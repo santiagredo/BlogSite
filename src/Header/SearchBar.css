@@ -1,0 +1,64 @@
+@import url('../variables.css');
+
+.search_bar_div{
+    background-color: var(--vanilla);
+    height: 2.5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 4px;
+}
+
+.search_bar_div form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search_bar_input{
+    border: none;
+    color: var(--vanilla);
+    width: 85%;
+}
+
+.search_bar_input:focus{
+    outline: none;
+}
+
+.search_bar_button{
+    background: none;
+    border: none;
+}
+
+
+
+@media (min-width: 768px) {
+    .search_bar_div{
+        width: 55vw;
+    }
+
+    .search_bar_div form{
+        width: 100%;
+    }
+
+    .search_bar_button{
+        width: 5%;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .search_bar_div{
+        height: 3vh;
+    }
+
+    .search_bar_input{
+        width: 95%;
+    }
+    
+    .search_bar_button{
+        width: 2.5%;
+    }
+}
