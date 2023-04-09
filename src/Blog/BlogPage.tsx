@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, Outlet} from 'react-router-dom';
 import { blog_data } from "./BlogData";
-import './Blog.css';
+import './BlogPage.css';
 
 interface Post {
     slug: string;
@@ -23,8 +23,8 @@ function Blog_link ({ post }: { post: Post }) {
 
 export function Blog_page () {
     return (
-        <React.Fragment>
-            <h1>Blog</h1>
+        <div className='blog_page_main_container'>
+            <h2>Blog</h2>
 
             <Outlet/>
             
@@ -33,6 +33,6 @@ export function Blog_page () {
                     <Blog_link key={post.slug} post={post}/>
                 ))}
             </ul>
-        </React.Fragment>
+        </div>
     );
 };

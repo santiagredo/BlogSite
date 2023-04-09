@@ -1,21 +1,20 @@
 @import url('variables.css');
 
-.main_container{
-    max-width: 95vw;
-    margin-top: 5vh;
-    padding: 0vh 2.5vw 1vh 2.5vw;
+.home_main_container{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5% auto 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .posts_containers{
+    box-sizing: border-box;
     width: 95%;
-    max-width: 95vw;
+    max-width: 95%;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    border: 4px solid var(--vanilla);
-    border-radius: 4px;
     padding: 2.5%;
 }
 
@@ -29,53 +28,41 @@
 }
 
 .pagination_container{
-    width: 95vw;
-    max-width: 95vw;
+    width: 95%;
+    max-width: 95%;
     display: flex;
     justify-content: space-between;
-    border: 0px;
 }
 
-.prev_next_button{
-    width: 15vw;
-    max-width: 15vw;
-    height: 3vh;
+.prev_next_button, .pages_button{
+    width: 35px;
+    height: 25px;
     border-radius: 4px;
     color: var(--vanilla);
     background-color: var(--vanilla);
     color: var(--blue);
 }
 
-.pages_button{
-    width: 4vw;
-    max-width: 4vw;
-    height: 3vh;
-    border-radius: 4px;
-    color: var(--vanilla);
-    background-color: var(--vanilla);
-    color: var(--blue);
-}
 
 
 
 @media (min-width: 1024px) {
-    .main_container{
+    .home_main_container{
         flex-direction: initial;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
-    .main_container h1{
+    .home_main_container h1{
         width: 100%;
         text-align: center;
     }
 
     .posts_containers{
-        margin-top: 1%;
-        margin-bottom: 1%;
+        margin: 2% auto;
         padding: .2% 2.5%; 
-        width: 30vw;
-        height: 27.5vh;
+        width: 30%;
+        height: 25%;
         text-align: justify;
         display: flex;
         flex-direction: column;
@@ -93,6 +80,7 @@
     }
 
     .pagination_container{
-        width: 82.5vw;
+        margin: 2% auto;
+        width: 80%;
     }
 }

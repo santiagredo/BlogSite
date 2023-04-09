@@ -1,0 +1,95 @@
+@import url('../variables.css');
+
+.profile_details_container{
+    color: var(--vanilla);
+    width: 95%;
+    margin: 0 auto;
+}
+
+.profile_details_container h2, .profile_details_container h1 {
+    text-align: center;
+}
+
+.profile_options_buttons_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile_options_buttons_container, .profile_details_container h1, .profile_details_container h3{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.profile_options_buttons_container button{
+    width: 130px; 
+    height: 25px;
+}
+
+.delete_confirmation_buttons_container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.delete_confirmation_buttons_container button{
+    width: 130px; 
+    height: 25px;
+    margin: 2% auto;
+}
+
+.edit_profile_container, .edit_profile_container form{
+    color: var(--vanilla);
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin: 2.5% auto;
+}
+
+.edit_profile_container form {
+    width: 100%;
+}
+
+.username_input, .fullname_input, .email_input, .select_role{
+    color: var(--vanilla);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border: 1px solid var(--vanilla);
+    border-radius: 4px;
+    padding: 1%;
+}
+
+.edit_profile_buttons_container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.edit_profile_buttons_container button{
+    width: 130px; 
+    height: 25px;
+}
+
+.administration_panel_container{
+    width: 95%;
+    margin: 2.5% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toggle_administration_panel_button_container{
+    width: 100%;
+}
+
+.toggle_administration_panel_button_container button{
+    width: 100%;
+    height: 25px;
+}
+
+
+
+
+@media (min-width: 768px) {
+    
+}

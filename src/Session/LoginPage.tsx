@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { use_auth } from "../auth";
 import { Signup_page } from './SignupPage';
 import { Login_modal_context, Signup_modal_context } from './ModalContext';
-import './Session.css';
+import './LoginPage.css';
 
 export function Login_page () {
     const auth = use_auth();
@@ -23,13 +23,24 @@ export function Login_page () {
         set_login_open(false);
     };
 
+    const prevent_scroll = () => {
+        document.body.style.overflow = "hidden";
+    };
+
+    React.useEffect(() => {
+        prevent_scroll();
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, []);
+
     return ReactDOM.createPortal (
         <React.Fragment>
             {login_open && (
                 <div className="session_container">
                     <h1>Login</h1>
 
-                    <form onSubmit={login}>
+                    <form className="session_container_form" onSubmit={login}>
                         <label>Insert your username:</label>
                         <input className="login_username_input" value={username} onChange={(e) => set_username(e.target.value)}/>
                     </form>

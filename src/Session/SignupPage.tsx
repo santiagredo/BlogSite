@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { users, use_auth } from "../auth";
 import { Login_modal_context, Signup_modal_context } from "./ModalContext";
+import './SignupPage.css';
 
 
 export function Signup_page () {
@@ -49,13 +50,24 @@ export function Signup_page () {
         };
     }; 
 
+    const prevent_scroll = () => {
+        document.body.style.overflow = "hidden";
+    };
+
+    React.useEffect(() => {
+        prevent_scroll();
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, []);
+
     return ReactDOM.createPortal (
         <React.Fragment>
             {signup_open && (
                 <div className="session_container">
                     <div className="close_signup_modal_button_container">
                         <button onClick={() => {set_signup_open(false), set_login_open(false)}}>
-                            x
+                            ❌
                         </button>
                     </div>
                     

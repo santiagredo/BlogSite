@@ -1,0 +1,59 @@
+@import url('../variables.css');
+
+.dropdown_container {
+    display: flex;
+    align-items: center;
+}
+
+.side_menu_toggle{
+    background: none;
+    border: none;
+    border-radius: 4px;
+    width: 25px;
+    height: 25px;
+    color: var(--vanilla);
+}
+
+.side_menu_toggle img{
+    width: 100%;
+}
+
+
+
+.side_menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    padding: 5%;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    flex-direction: column;
+    border-left: 1px solid var(--orange);
+    box-shadow: -5px 0px 10px var(--blue);
+}
+
+
+.side_menu a, .side_menu p{
+    width: 100%;
+    margin: 5% 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: end;
+}
+
+
+
+@media (min-width: 768px) {
+
+}
+
+
+
+@media (min-width: 1024px) {
+    .side_menu{
+        padding: 2%;  
+    }
+}

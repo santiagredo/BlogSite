@@ -1,8 +1,7 @@
-import './App.css';
 import React from 'react';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import { Auth_provider } from './auth';
-import { Header_Creator } from './Header/HeaderCreator';
+import { Header } from './Header/Header';
 import { Home_Page } from './HomePage';
 import { Blog_page } from './Blog/BlogPage';
 import { Blog_post } from './Blog/BlogPost';
@@ -41,8 +40,8 @@ function App() {
     <React.Fragment>
       <HashRouter>
         <App_providers>
-          <Header_Creator/>
-          <div className='main_container'>
+          <Header/>
+          
             <Routes>
               <Route path='/' element={<Home_Page/>}/>
               <Route path='/blog' element={<Blog_page/>}/>
@@ -52,7 +51,7 @@ function App() {
               <Route path='/search/:slug' element={<Search_results/>}/>
               <Route path='/create' element={<Blog_creator/>}/>
             </Routes>
-          </div>
+
         </App_providers>
       </HashRouter>
     </React.Fragment>
@@ -81,6 +80,10 @@ export default App;
 //Done  9.2 Arreglar el modal para iniciar sesion, no se cierra automaticamente al hacer click en otra pantalla
 //Done  9.3 Agregar la opcion de editar blogs para el autor
 //Done  10. Darle estilos
-//  10.1  Darle estilo a los botones
-//  11. Hacer que el dropdown menu se cierre al oprimir fuera de este
+//Done  10.1  Darle estilo a los botones
+//Done  11. Hacer que el dropdown menu se cierre al oprimir fuera de este
 //  12. Hacer que el respectivo boton de paginacion se muestre diferente al estar disabled
+//  13. Hacer una página para 404
+//  14. Arreglar la creación de usuarios en admin panel, no se boran los camppos al crear usuario
+//  15. Es necesario agregar IDs a los posts y los usuarios, para que pueden modificarse sin errores
+//  16. Arreglar search, al hacer búsqueda se muestra todo el contenido del post

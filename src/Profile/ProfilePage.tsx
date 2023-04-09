@@ -3,7 +3,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { use_auth, Auth_route, users } from "../auth";
 import { Profiles_management } from "./ProfilesManagement";
 import { Profiles_generator } from "./ProfilesGenerator";
-import './Profiles.css';
+import './ProfilePage.css';
 
 export function Profile_name () {
     const auth = use_auth();
@@ -77,13 +77,13 @@ export function Profile_page () {
                     <h3>Role: {auth?.user?.role}</h3>
 
                     <div className="profile_options_buttons_container">
-                        <button onClick={() => set_delete_confirmation_open(true)}>Delete account</button>
                         <button onClick={() => set_edit_profile(true)}>Edit</button>
+                        <button onClick={() => set_delete_confirmation_open(true)}>Delete account</button>
                     </div>
                 </div>
             )}
             {delete_confirmation_open && !edit_profile &&(
-                <div>
+                <div className="profile_details_container">
                     <h2>Do you want to delete your account?</h2>
                     <div className="delete_confirmation_buttons_container">
                         <button onClick={() => delete_account()}>Delete</button>

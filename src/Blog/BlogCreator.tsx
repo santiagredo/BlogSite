@@ -4,7 +4,7 @@ import { use_auth } from "../auth";
 import { blog_data } from "./BlogData";
 import { Login_page } from "../Session/LoginPage";
 import { Login_modal_context } from "../Session/ModalContext";
-import './Blog.css';
+import './BlogCreator.css';
 
 
 export function Blog_creator () {

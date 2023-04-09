@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { use_auth } from "../auth";
 import { blog_data } from "./BlogData";
-import './Blog.css';
+import './BlogPost.css';
 
 
 export function Blog_post () {
@@ -46,9 +46,9 @@ export function Blog_post () {
     };
 
     return (
-        <React.Fragment>
+        <div className='blog_post_main_container'>
             <div className='return_button_container'>
-                <button onClick={return_to_blog}>Return</button>
+                <button onClick={return_to_blog}>⬅️</button>
             </div>
 
             {!edit_post && (
@@ -96,6 +96,6 @@ export function Blog_post () {
                     </div>
                 </React.Fragment>
             )}
-        </React.Fragment>
+        </div>
     );
 };

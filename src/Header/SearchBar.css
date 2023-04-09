@@ -1,8 +1,8 @@
 @import url('../variables.css');
 
 .search_bar_div{
-    background-color: var(--vanilla);
-    height: 2.5vh;
+    height: 25px;
+    max-width: 500px;
     display: flex;
     align-items: center;
     padding-left: 1vw;
@@ -17,9 +17,11 @@
 }
 
 .search_bar_input{
-    border: none;
+    box-sizing: border-box;
     color: var(--vanilla);
-    width: 85%;
+    width: 95%;
+    border-radius: 4px;
+    padding: 0 2%;
 }
 
 .search_bar_input:focus{
@@ -29,6 +31,21 @@
 .search_bar_button{
     background: none;
     border: none;
+}
+
+
+
+.search_results_container {
+    box-sizing: border-box;
+    width: 95%;
+    max-width: 95%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    padding: 2.5%;
+}
+
+.search_results_container h1 {
+    text-align: center;
 }
 
 

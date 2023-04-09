@@ -1,0 +1,72 @@
+@import url('../variables.css');
+
+.close_signup_modal_button_container{
+    width: 95%;
+    display: flex;
+    justify-content: end;
+}
+
+.close_signup_modal_button_container button {
+    width: 35px;
+}
+
+.signup_form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup_form label{
+    margin-bottom: 2%;
+    margin-top: 10%;
+}
+
+.signup_form input{
+    color: var(--vanilla);
+    border: 1px solid var(--vanilla);
+    border-radius: 4px;
+    padding: 2%;
+    height: 25px;
+}
+
+.signup_buttons_container{
+    margin: 10% auto 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup_buttons_container button{
+    width: 45%;
+    height: 25px;
+    margin-bottom: 15%;
+}
+
+
+
+@media (min-width: 768px) {
+    .close_signup_modal_button_container {
+        width: 60%;
+    }
+
+    .signup_form {
+        width: 60%;
+        max-width: 600px;
+        margin-top: 5%;
+    }
+
+    .signup_form label{
+        font-size: 1.5rem;
+        margin: 2% auto 0;
+    }
+
+    .signup_buttons_container {
+        margin: 5% auto auto;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+
+}

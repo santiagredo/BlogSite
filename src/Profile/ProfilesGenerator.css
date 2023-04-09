@@ -1,0 +1,24 @@
+@import url('../variables.css');
+
+.profiles_generator_container, .profiles_generator_container form{
+    color: var(--vanilla);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.profiles_generator_container h1 {
+    text-align: center;
+}
+
+.profiles_generator_container form h3, .profiles_generator_container form input, .profiles_generator_container form select{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.profiles_generator_container form button{
+    width: 100%;
+    height: 25px;
+}

@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { blog_data } from "../Blog/BlogData";
 import { Search_context } from "./SearchContext";
-
 import './SearchBar.css';
 
 export function Search_bar () {
@@ -45,7 +44,7 @@ export function Search_bar () {
                         }}
                         >
                             🔍
-                        </button>
+                    </button>
             </form>
         </div>
     );
@@ -58,7 +57,7 @@ export function Search_results () {
     return (
         <React.Fragment>
             {results.length > 0 && query.length !== 0 && (
-                <div>
+                <div className="search_results_container">
                     <h1>Search results for: {query}</h1>
         
                     {results.map((ele) => {
@@ -75,7 +74,7 @@ export function Search_results () {
                 </div>
             )}
             {results.length === 0 && query.length !== 0 && (
-                <div>
+                <div className="search_results_container">
                     <h1>No results for: {query}</h1>
                 </div>
             )}

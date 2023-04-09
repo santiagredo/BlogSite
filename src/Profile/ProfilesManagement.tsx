@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { use_auth } from "../auth";
 import { users, User } from "../auth";
-import './Profiles.css';
+import './ProfilesManagement.css';
 
 export function Profiles_management () {
 
@@ -92,7 +92,7 @@ function Profile_editor (ele: User) {
     };
 
     return (
-        <div className="profile_details_container" key={ele.username}>
+        <div className="single_profile_details_container" key={ele.username}>
             {!edit_profile && !delete_confirmation_open &&(
                 
                 <React.Fragment>
@@ -102,8 +102,8 @@ function Profile_editor (ele: User) {
                     <p>Role: {ele.role} </p>
                     {ele.role !== 'admin' && (
                         <div className="individual_profile_options_buttons_container">
-                            <button onClick={() => set_delete_confirmation_open(true)}>Delete</button>
                             <button onClick={() => set_edit_profile(true)}>Edit</button>
+                            <button onClick={() => set_delete_confirmation_open(true)}>Delete</button>
                         </div>
                     )}
                 </React.Fragment>
@@ -137,8 +137,8 @@ function Profile_editor (ele: User) {
                         <h1>Do you want to delete {ele.username}'s account?</h1>
                         
                         <div className="delete_individual_profile_confirmation_buttons_container">
-                            <button onClick={() => delete_account(ele.username)}>Delete</button>
                             <button onClick={() => set_delete_confirmation_open(false)}>Cancel</button>
+                            <button onClick={() => delete_account(ele.username)}>Delete</button>
                         </div>
                     </div>
                 </React.Fragment>

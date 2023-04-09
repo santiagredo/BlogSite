@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { blog_data } from "./Blog/BlogData";
+import './HomePage.css';
 
 export function Home_Page () {
-    const elements_per_page = 10;
+    const elements_per_page = 9;
     const total_pages = Math.ceil(blog_data.length / elements_per_page);
 
     const [current_page, set_current_page] = React.useState(1);
@@ -24,7 +25,7 @@ export function Home_Page () {
     };
 
     return (
-        <React.Fragment>
+        <div className="home_main_container">
             <h1>Home</h1>
 
             {current_page_posts.map((ele) => {
@@ -43,14 +44,14 @@ export function Home_Page () {
             })}
 
             <div className='pagination_container'>
-                <button type="button" className="prev_next_button" onClick={() => handle_page_change(current_page - 1)}>Previous</button>
+                <button type="button" className="prev_next_button" onClick={() => handle_page_change(current_page - 1)}>⬅️</button>
                 {page_numbers.map((page) => (
                     <button type="button" className="pages_button" key={page} onClick={() => handle_page_change(page)} disabled={page === current_page}>
                         {page}
                     </button>
                 ))}
-                <button type="button" className="prev_next_button" onClick={() => handle_page_change(current_page + 1)}>Next</button>
+                <button type="button" className="prev_next_button" onClick={() => handle_page_change(current_page + 1)}>➡️</button>
             </div>
-        </React.Fragment>
+        </div>
     );
 };

@@ -1,0 +1,161 @@
+@import url('../variables.css');
+
+button{
+    border: 1px solid var(--vanilla);
+    border-radius: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.blog_post_main_container {
+    margin: 2.5%;
+}
+
+.return_button_container{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 1%;
+}
+
+.return_button_container button {
+    width: 35px;
+}
+
+.post_container{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post_container p{
+    width: 100%;
+    text-align: start;
+}
+
+.edition_options_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.edition_options_container button{
+    width: 100%;
+    height: 25px;
+    margin: 1% auto;
+}
+
+.delete_post_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.delete_post_container div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.delete_post_container p{
+    color: var(--orange);
+    text-align: center;
+}
+
+.delete_post_container div button{
+    width: 130px;
+}
+
+.title_input, .content_input{
+    color: var(--vanilla);
+    border: 1px solid var(--vanilla);
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.content_input{
+    height: 50vh;
+    max-height: 50vh;
+}
+
+.edit_post_container{
+    max-width: 100%;
+    color: var(--vanilla);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.edit_post_container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.edit_post_container div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit_post_container div button{
+    width: 130px;
+    height: 25px;
+}
+
+
+
+@media (min-width: 768px) {
+    .main_container {
+        width: 75%;
+        margin: 5% auto;
+        font-size: 1.2rem;
+    }
+
+    .edition_options_container{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5%;
+    }
+
+    .edition_options_container button {
+        max-width: 200px;
+    }
+
+    .title_input, .content_input {
+        margin: 1% auto;
+        padding: 1%;
+        font-size: 1.2rem;
+        box-sizing: border-box;
+    }
+    
+    .edit_post_container div button, .edition_options_container button, .delete_post_container div button {
+        height: 36px;
+        width: 200px;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .main_container {
+        display: flex;
+    }
+
+    .post_container p{
+        font-size: 1.2rem;        
+    }
+
+
+    .edit_post_container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,36 @@
+@import url('../variables.css');
+
+.logout_form {
+    font-size: 2rem;
+    max-width: 600px;
+}
+
+.logout_buttons_container{
+    width: 95%;
+    max-width: 600px;
+    margin: 5% auto 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logout_buttons_container button{
+    width: 45%;
+    height: 25px;   
+    font-size: 1rem;
+}
+
+
+
+@media (min-width: 768px) {
+    /* .logout_buttons_container{
+        width: 60%;
+        margin: 5% auto 15%;
+    } */
+
+}
+
+
+
+@media (min-width: 1024px) {
+
+}

@@ -1,9 +1,0 @@
-@import url('../variables.css');
-
-.header_container{
-    margin-bottom: 1vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: solid var(--orange);
-}

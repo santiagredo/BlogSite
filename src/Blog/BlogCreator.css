@@ -1,0 +1,77 @@
+@import url('../variables.css');
+
+button{
+    border: 1px solid var(--vanilla);
+    border-radius: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+.blog_creator_main_container{
+    margin: 2.5%;
+    color: var(--vanilla);
+    display: flex;
+    flex-direction: column;    
+}
+
+.blog_creator_main_container h1 {
+    text-align: center;
+}
+
+.blog_creator_main_container form {
+    width: 100%;
+}
+
+.create_title_input, .create_content_input{
+    color: var(--vanilla);
+    border: 1px solid var(--vanilla);
+    border-radius: 4px;
+    width: 100%;
+    margin: 2% auto;
+    padding: 1%;
+}
+
+.create_content_input{
+    height: 50vh;
+    max-height: 50vh;
+}
+
+.blog_creator_main_container button{
+    width: 100%;
+    height: 25px;
+}
+
+.create_blog_redirect_container{
+    margin: 2.5%;
+    text-align: center;
+}
+
+.create_blog_redirect_container button{
+    width: 100%;
+    height: 25px;
+    margin: 5% auto;
+}
+
+
+
+@media (min-width: 768px) {
+    .blog_creator_main_container form label, .blog_creator_main_container form button{
+        font-size: 1.2rem;
+    }
+    
+    .create_blog_redirect_container button {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .create_content_input{
+        height: 30vh;
+        max-height: 30vh;
+    }
+}

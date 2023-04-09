@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { users } from "../auth";
-import './Profiles.css';
+import './ProfilesGenerator.css';
 
 
 export function Profiles_generator () {
