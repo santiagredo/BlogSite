@@ -63,7 +63,7 @@ export function Search_results () {
                     {results.map((ele) => {
                         return (
                             <div key={ele.slug}>
-                                <Link to={`/post/${ele.slug}`} style={{fontSize: '2rem'}}>
+                                <Link to={`/post/${ele.blog_id}/${ele.slug}`} style={{fontSize: '2rem'}}>
                                     {ele.title}
                                 </Link>
                                 <p>{ele.content}</p>

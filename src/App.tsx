@@ -46,7 +46,7 @@ function App() {
             <Routes>
               <Route path='/home' element={<Home_Page/>}/>
               <Route path='/blog' element={<Blog_page/>}/>
-              <Route path='/post/:slug' element={<Blog_post/>}/>
+              <Route path='/post/:id/:slug' element={<Blog_post/>}/>
               <Route path='/profile' element={<Profile_page/>}/>
               <Route path='/search/' element={<Home_Page/>}/>
               <Route path='/search/:slug' element={<Search_results/>}/>
@@ -85,7 +85,7 @@ export default App;
 //Done  10.1  Darle estilo a los botones
 //Done  11. Hacer que el dropdown menu se cierre al oprimir fuera de este
 //Done  12. Hacer que el respectivo boton de paginacion se muestre diferente al estar disabled
-//  13. Hacer una página para 404
-//  14. Arreglar la creación de usuarios en admin panel, no se boran los camppos al crear usuario
+//Done  13. Hacer una página para 404
+//Done  14. Arreglar la creación de usuarios en admin panel, no se boran los camppos al crear usuario
 //  15. Es necesario agregar IDs a los posts y los usuarios, para que pueden modificarse sin errores
 //  16. Arreglar search, al hacer búsqueda se muestra todo el contenido del post

@@ -7,11 +7,11 @@ import './BlogPost.css';
 
 export function Blog_post () {
     const navigate = useNavigate();
-    const { slug } = useParams();
+    const { id } = useParams();
 
     const auth = use_auth();
 
-    const blog_post = blog_data.find((post) => post.slug === slug);
+    const blog_post = blog_data.find((post) => post.blog_id === Number(id));
 
     const can_delete = blog_post?.author === auth?.user?.username || String(auth?.user?.role) === 'admin';
 
@@ -57,6 +57,7 @@ export function Blog_post () {
 
                     <p>{blog_post!.content.split('\n').map((line, index) => {return <React.Fragment>{line}<br/></React.Fragment>})}</p>
                     <p>By: {blog_post!.author}</p>
+                    <p>Id: {blog_post!.blog_id}</p>
 
                     <div className='edition_options_container'>
                         {can_delete && !delete_confirmation_open && (

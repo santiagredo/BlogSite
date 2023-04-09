@@ -1,8 +1,9 @@
 export interface blog_object {
     title: string,
     slug: string,
-    content: string
-    author: string
+    content: string,
+    author: string,
+    blog_id: number
 };
 
 export const blog_data: blog_object[] = [  
@@ -10,132 +11,154 @@ export const blog_data: blog_object[] = [
         title: `What is React?`,
         slug: `what-is-react`,
         content: `React is a free and open-source front-end JavaScript library for building user interfaces or UI components. \n\n It was created by Facebook and is now maintained by Facebook and a community of individual developers and companies. \n\n React makes it easy to build reusable UI components and manage their state efficiently. It uses a declarative approach to describe how the UI should look and allows developers to write code using JSX, which is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files. \n\n React is widely used by developers and companies around the world and has become one of the most popular front-end libraries in the industry.`,
-        author: `santiagredo`
+        author: `santiagredo`,
+        blog_id: 1,
         },  
     {
         title: `What is Vue?`,
         slug: `what-is-vue`,
         content: `Vue is a progressive framework for building user interfaces. \n\n The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. It provides seamless integration with other tools and libraries, and can be used for building complex single-page applications as well as simple UI enhancements for existing projects.`,
-        author: `JuanDC`
+        author: `JuanDC`,
+        blog_id: 2,
         },  
     {
         title: `What is Angular?`,
         slug: `what-is-angular`,
         content: `Angular is a JavaScript framework for building web applications. \n\n It was first released in 2010 by Google and has since become one of the most popular front-end development tools available. Angular allows developers to create dynamic, responsive, and interactive web applications with ease. \n\n The framework is built on top of TypeScript, a statically typed superset of JavaScript that allows for better type checking and improved code quality. Angular provides a wide range of features and tools, including component-based architecture, two-way data binding, dependency injection, and more. Its robust set of tools and features makes it an excellent choice for building complex and scalable web applications. \n\n If you're looking to build high-performance web applications, Angular is definitely worth considering.`,
-        author: `Nicobytes`
+        author: `Nicobytes`,
+        blog_id: 3,
         },
     {
         title: `How to Improve Performance in React`,
         slug: `improve-performance-react`,
         content: `React is a powerful framework for building web applications, but with great power comes great responsibility. As your application grows, it's important to take steps to improve its performance. Here are some tips to help you do just that:\n\n1. Use the React Profiler: The React Profiler is a powerful tool that helps you identify performance bottlenecks in your application. By using this tool, you can pinpoint which components are taking up the most resources and optimize them for better performance.\n\n2. Minimize State Changes: State changes can be expensive in terms of performance. To minimize them, you can use the shouldComponentUpdate lifecycle method or PureComponent to prevent unnecessary re-renders.\n\n3. Use React.memo: React.memo is a higher-order component that can help you optimize performance by memoizing the results of a component's render function. This can help prevent unnecessary re-renders.\n\n4. Use Lazy Loading: Lazy loading is a technique that allows you to defer the loading of non-critical resources until they are needed. By using lazy loading, you can improve the initial load time of your application and reduce the amount of resources that need to be loaded.\n\n5. Optimize Images: Images can be a major source of performance issues in web applications. To optimize them, you can use tools like ImageOptim or TinyPNG to compress your images and reduce their file size.\n\nBy following these tips, you can improve the performance of your React application and provide a better user experience for your users. Good luck!`,
-        author: `freddier`
+        author: `freddier`,
+        blog_id: 4,
         },
     {
         title: `Comparison between React and Vue`,
         slug: `comparison-react-vue`,
         content: `When deciding which front-end framework to use for your project, two popular choices are React and Vue. Both have their advantages and disadvantages, and ultimately the decision comes down to your specific needs and preferences.\n\nReact is known for its flexibility and large community, making it a great choice for larger and more complex projects. It uses a virtual DOM to efficiently render components and provides a wide range of tools and libraries to help with development. However, it can be difficult to learn and can require more setup and configuration than some other frameworks.\n\nVue, on the other hand, is known for its simplicity and ease of use. It uses a template-based syntax that makes it easy to get started with and requires less boilerplate code than React. It also offers great performance and a smaller learning curve than React. However, its smaller community may mean less support and fewer resources available.\n\nOverall, both React and Vue are great choices for front-end development. Consider your project requirements and your own experience and preferences when making your decision.`,
-        author: `Irisval`
+        author: `Irisval`,
+        blog_id: 5,
         },
     {
         title: `Angular vs React vs Vue: which one to choose?`,
         slug: `angular-react-vue-which-one-to-choose`,
         content: `When it comes to choosing a framework for your next web development project, it can be overwhelming to decide which one to go with. Three of the most popular frameworks for JavaScript development are Angular, React, and Vue. Each of them has its own set of pros and cons, which can make the decision-making process even more challenging. In this article, we will take a closer look at these three frameworks and help you choose the best one for your project.\n\nAngular:\nAngular is a comprehensive framework that offers a complete solution for building large-scale applications. It is maintained by Google and has a large community of developers. One of the main advantages of Angular is that it offers a complete set of tools and features out of the box, including dependency injection, two-way data binding, and unit testing. However, Angular can be quite complex and has a steep learning curve. It also has a large footprint and can be slower than other frameworks.\n\nReact:\nReact is a lightweight and flexible framework that is popular for building user interfaces. It is maintained by Facebook and has a large community of developers. One of the main advantages of React is that it offers a virtual DOM, which can improve performance and make it easier to update the UI. React is also highly modular, which means that you can use only the parts you need. However, React is not a complete solution, and you will need to use additional libraries to handle things like routing and state management.\n\nVue:\nVue is a progressive framework that is designed to be easy to use and flexible. It is maintained by an independent developer and has a growing community of developers. One of the main advantages of Vue is that it offers a simple and intuitive API, which can make it easy to get started with. It also has a small footprint and can be faster than other frameworks. However, Vue is not as widely adopted as Angular or React, which means that it may be more challenging to find help and resources.\n\nSo, which one should you choose?\nWhen it comes to choosing between Angular, React, and Vue, there is no clear winner. Each of them has its own set of pros and cons, and the best one for your project will depend on your specific requirements and constraints. If you are building a large-scale application that requires a complete solution, Angular may be the best choice. If you are building a user interface and value flexibility, React may be the best choice. If you are looking for a simple and intuitive framework, Vue may be the best choice. Ultimately, the most important thing is to choose a framework that you feel comfortable with and that meets your project's needs.`,
-        author: `RetaxMaster`
+        author: `RetaxMaster`,
+        blog_id: 6,
         },
     {
         title: `How to use Redux with React`,
         slug: `using-redux-with-react`,
         content: `Redux is a library for managing state in React applications. \n\n It provides a predictable state container, making it easier to develop and maintain complex applications. To use Redux with React, you first need to install it as a dependency in your project. Once installed, you need to create a store that will hold your application's state. This can be done using the createStore function from Redux. You can then create actions that represent the various ways in which your application's state can change. These actions are functions that return an object with a type property and any additional data that needs to be passed along. To update the state, you need to dispatch these actions to the store. You can do this using the dispatch function that is provided by the store. Finally, you can access the state in your components using the useSelector hook from the react-redux library.`,
         author: `santiagredo`,
+        blog_id: 7,
         },
     {
         title: `Tips for working with Vue`,
         slug: `tips-working-vue`,
         content: `Vue is a very powerful framework, but there are certain things you need to keep in mind when working with it. Here are some tips to help you work more efficiently and effectively with Vue:\n\n1. Keep your templates small and modular: Vue's template system is designed to be modular, so try to break your templates into smaller components that can be reused throughout your application.\n\n2. Use computed properties to simplify your code: Computed properties allow you to derive new data based on the values of existing data, making it easier to keep your code clean and concise.\n\n3. Take advantage of Vue's lifecycle hooks: Vue provides a number of lifecycle hooks that allow you to execute code at specific points during a component's lifecycle, such as when it's created or destroyed.\n\n4. Keep your state centralized: Vuex is Vue's state management system and is designed to help you manage complex state across your application. Make sure to keep your state centralized in Vuex to make it easier to manage and avoid duplication of code.\n\n5. Use Vue Router for navigation: Vue Router is Vue's official routing library and allows you to easily manage navigation within your application. Make sure to take advantage of its features to create a smooth and intuitive user experience.\n\nBy following these tips, you'll be able to work more efficiently and effectively with Vue and take your skills to the next level.`,
-        author: `JuanDC`
+        author: `JuanDC`,
+        blog_id: 8,
         },
     {
         title: `Best practices when using Angular`,
         slug: `best-practices-angular`,
         content: `Angular is a powerful framework for developing web applications, but it's important to use it properly to get the best results. Here are some tips to follow when using Angular in your projects:\n\n1. Use a consistent coding style: Whether you prefer tabs or spaces, curly braces on the same line or on a new line, it's important to be consistent throughout your code. This makes it easier to read and maintain.\n\n2. Follow the Angular style guide: The Angular team has put together a comprehensive style guide that covers everything from naming conventions to file organization. It's a great resource to consult when you're not sure how to proceed.\n\n3. Use dependency injection: Dependency injection is a key feature of Angular that allows you to write more modular and testable code. Make sure to use it to its fullest potential.\n\n4. Keep your components small and focused: Instead of creating one giant component that does everything, break it down into smaller components that are easier to manage and test.\n\n5. Use services for shared data: If you have data that needs to be shared between components, use a service to manage it. This ensures that the data is consistent and up-to-date throughout your application.\n\n6. Use RxJS for asynchronous operations: RxJS is a powerful library that makes it easy to work with asynchronous data streams. Take the time to learn it and use it in your projects.\n\n7. Test your code: Writing tests is a crucial part of software development. Use Angular's built-in testing framework to write unit tests for your components and services.\n\nBy following these best practices, you'll be well on your way to building great Angular applications that are easy to read, maintain, and scale.`,
-        author: `Nicobytes`
+        author: `Nicobytes`,
+        blog_id: 9,
         },
     {
         title: `How to integrate React with Django`,
         slug: `integrate-react-django`,
         content: `Integrating the frontend of React with the backend of Django is a common requirement for many modern web applications. In this tutorial, we will guide you through the process of integrating React with Django in your projects. We will cover everything from setting up the necessary tools to building a simple application that demonstrates the integration.`,
-        author: `Freddier`
+        author: `Freddier`,
+        blog_id: 10,
         },
     {
         title: `How to create a REST API with Node.js`,
         slug: `create-rest-api-nodejs`,
         content: `In this step-by-step tutorial, we will show you how to create a REST API using Node.js and Express. REST APIs are widely used to allow different software applications to communicate with each other over the internet. By the end of this tutorial, you will have a fully functional REST API that can be used to serve data to other applications.\n\nTo get started, we assume that you have some basic knowledge of JavaScript and Node.js. If you're new to these technologies, we recommend that you spend some time learning the basics before continuing with this tutorial.\n\nFirst, we will set up our Node.js project and install the necessary dependencies. We will be using the Express framework to create our REST API. Express is a fast, unopinionated, and minimalist web framework for Node.js.\n\nNext, we will create a simple server that listens to HTTP requests on a specified port. This server will be responsible for handling incoming requests and returning responses. We will also create a basic routing mechanism that allows us to handle different HTTP methods (GET, POST, PUT, DELETE) and different endpoints.\n\nOnce we have set up our server and routing, we will create a data model and a database. We will be using MongoDB, a popular NoSQL database, to store our data. We will create a simple schema that defines the structure of our data and a set of CRUD (Create, Read, Update, Delete) operations that allow us to manipulate our data.\n\nFinally, we will add some security features to our REST API. We will be using JSON Web Tokens (JWTs) to authenticate our users and protect our endpoints. JWTs are a popular way to secure web applications because they allow us to encode and decode information in a secure and verifiable way.\n\nBy the end of this tutorial, you will have a solid understanding of how to create a REST API with Node.js and Express. We hope you find this tutorial helpful and informative. Happy coding!`,
-        author: `MauricioTorres`
+        author: `MauricioTorres`,
+        blog_id: 11,
         },
     {
         title: `Vue 3: What's new`,
         slug: `vue-3-whats-new`,
         content: `Vue 3 brings significant changes and improvements to the popular JavaScript framework. Here we'll dive into the details of what's new in Vue 3 and how it compares to previous versions.\n\nOne of the most significant changes in Vue 3 is the introduction of a new renderer called the 'runtime core.' This renderer is designed to be faster and more lightweight than the previous one, making Vue 3 more performant overall. Additionally, the new renderer enables better handling of edge cases, such as server-side rendering and hydration, which were previously difficult to achieve with Vue.\n\nAnother notable improvement in Vue 3 is the introduction of a new Composition API. This API is intended to address some of the challenges that developers faced when using the Options API in previous versions of Vue. The Composition API provides more flexibility and modularity in component design, making it easier to write reusable and maintainable code.\n\nVue 3 also includes other enhancements, such as improved TypeScript support, better performance of the template compiler, and a more intuitive component setup syntax. Overall, Vue 3 is a significant upgrade over previous versions and is worth considering for new projects and upgrades of existing Vue applications.\n\nThe author of this article, Irisval, is a Vue.js enthusiast and experienced developer who has worked on several Vue projects. He is excited about the improvements in Vue 3 and is looking forward to using it in future projects.`,
-        author: `Irisval`
+        author: `Irisval`,
+        blog_id: 12,
         },
     {
         title: `React Native vs Flutter: which one to choose for your mobile app`,
         slug: `react-native-flutter-choose`,
         content: `When it comes to developing a mobile app, choosing the right framework can be a daunting task. Two of the most popular options are React Native and Flutter, but which one is the best fit for your project?\n\nReact Native, developed by Facebook, is an open-source framework that allows you to build cross-platform mobile apps using JavaScript and React. It uses native components and offers excellent performance and fast development times. Flutter, on the other hand, is a framework developed by Google that uses the Dart language and offers a fast development cycle and a customizable widget set.\n\nOne of the main differences between the two frameworks is the language used. React Native uses JavaScript, a widely-used language that many developers are familiar with, while Flutter uses Dart, a language that is less widely used but has some unique features that make it a great choice for mobile app development.\n\nAnother difference is in the approach to building UI. React Native uses a markup language called JSX to build UI components, while Flutter uses its own widget set to create UI components. This means that building UI in Flutter can be faster and more customizable, but there is a learning curve involved in learning the Flutter widget set.\n\nWhen it comes to performance, both frameworks are fast and efficient. React Native uses native components to achieve excellent performance, while Flutter uses its own rendering engine to achieve fast performance on both iOS and Android.\n\nUltimately, the choice between React Native and Flutter comes down to your specific project requirements and personal preferences. If you're already familiar with JavaScript and React, React Native may be the easier option to pick up. However, if you're looking for a customizable widget set and are willing to learn Dart, Flutter may be the better choice for your project.`,
-        author: `RetaxMaster`
+        author: `RetaxMaster`,
+        blog_id: 13,
         },
     {
         title: `How to Implement Authentication with Passport.js in Node.js`,
         slug: `implement-authentication-passportjs-nodejs`,
         content: `In this article, we will guide you on how to implement authentication in your Node.js application using Passport.js, an authentication middleware for Node.js. \n\n Authentication is a fundamental feature for any web application that requires users to have personalized access to certain features and data. Passport.js offers a simple and effective way to authenticate users through various strategies such as local authentication (using a username and password), social authentication (using popular social media platforms such as Facebook, Google, Twitter), and many more. \n\n By the end of this article, you will have a solid understanding of how to implement authentication using Passport.js in your Node.js application.`,
-        author: `MauricioTorres`
+        author: `MauricioTorres`,
+        blog_id: 14,
         },
     {
         title: `How to use React Hooks`,
         slug: `react-hooks-how-to-use`,
         content: `React Hooks are a powerful way to manage state and other features in React. They were introduced in React 16.8 and have quickly become a popular tool for developers. Before Hooks, state and other features were only available in class components. But with Hooks, functional components can now have the same features as class components. This means you can now write more modular and reusable code in your React applications.\n\nThere are several types of Hooks, including useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, and useImperativeHandle. Each Hook has a specific use case and can help simplify your code. For example, the useState Hook allows you to add state to a functional component, while the useEffect Hook allows you to perform side effects such as fetching data from an API.\n\nTo use a Hook in your functional component, you simply import it from the 'react' package and call it in the body of your component. For example, to use the useState Hook, you would write:\n\nconst [state, setState] = useState(initialState);\n\nwhere 'state' is the current state value, 'setState' is a function that allows you to update the state value, and 'initialState' is the initial value of the state.\n\nOverall, React Hooks are a great addition to the React library and have made functional components more powerful than ever before. If you're new to React, we highly recommend learning how to use Hooks in your applications.`,
-        author: `santiagredo`
+        author: `santiagredo`,
+        blog_id: 15,
         },
     {
         title: `Vue.js vs Angular: which one to choose for your project`,
         slug: `vuejs-angular-choose-project`,
         content: `Vue.js and Angular are two of the most popular front-end frameworks. Both have their advantages and disadvantages, and choosing the right one for your project can be a daunting task. In this article, we will explore the main differences between Vue.js and Angular and help you decide which one to choose for your project.\n\nOne of the main differences between Vue.js and Angular is their approach to templating. Vue.js uses a template-based syntax that is very similar to HTML, while Angular uses a more complex syntax that is based on TypeScript. This can make Vue.js easier to learn and use for developers who are already familiar with HTML and CSS.\n\nAnother difference is the size of the framework. Vue.js is a relatively lightweight framework, with a file size of around 80 KB. Angular, on the other hand, is a much larger framework, with a file size of around 500 KB. This means that Vue.js can be faster and more efficient, especially for smaller projects.\n\nWhen it comes to performance, both Vue.js and Angular are fast and efficient. However, Vue.js is known for its faster rendering speed and smaller memory footprint, which can make it a better choice for projects that require high performance.\n\nFinally, both frameworks have a strong community and good documentation. Vue.js has a more active community and is known for its ease of use, while Angular has a more enterprise-oriented community and is known for its scalability.\n\nIn conclusion, both Vue.js and Angular are great front-end frameworks, and the choice between them ultimately depends on the specific needs of your project. If you are looking for a lightweight, easy-to-learn framework, Vue.js may be the way to go. If you need a more complex, scalable framework with a larger community and enterprise support, then Angular may be the better choice. Either way, both frameworks have their advantages and can help you build fast, efficient, and modern web applications.`,
-        author: `JuanDC`
+        author: `JuanDC`,
+        blog_id: 16,
         },
     {
         title: `How to Use Animations in React`,
         slug: `using-animations-in-react`,
         content: `Animations can add a lot of visual appeal to your React components. In this article, we will explore various ways to use animations in React. We will cover topics such as CSS transitions, keyframe animations, and popular animation libraries like React Spring and Framer Motion. We will also discuss the best practices for using animations in your React app to ensure smooth performance and a great user experience. Whether you are new to React or an experienced developer, this article will provide you with the knowledge and skills you need to create engaging and interactive animations in your React components.`,
-        author: `freddier`
+        author: `freddier`,
+        blog_id: 17,
         },
     {
         title: `Best Practices When Using Vue.js`,
         slug: `best-practices-when-using-vuejs`,
         content: `Vue.js is a powerful JavaScript framework for building user interfaces. If you're new to Vue.js, or even if you've been using it for a while, there are some best practices that you should keep in mind to make sure you're getting the most out of the framework. In this article, we'll go over some of the best practices when using Vue.js in your projects. \n\nFirstly, it's important to understand the Vue.js instance lifecycle. Understanding the lifecycle can help you write better code and avoid common pitfalls. You should also make use of computed properties and watch properties to make your code more efficient and maintainable. Additionally, it's important to organize your components into a clear and logical structure, and make use of Vue.js directives to simplify your template code.\n\nAnother best practice when using Vue.js is to use Vuex for state management. Vuex is a state management pattern and library that can help you manage your application's state more easily. Vuex also makes it easier to manage communication between components in your application.\n\nFinally, it's important to keep your Vue.js code clean and maintainable. This means avoiding 'magic' values and making use of descriptive variable names. You should also use the latest version of Vue.js and keep up to date with the latest best practices and patterns.\n\nBy following these best practices, you can ensure that your Vue.js code is efficient, maintainable, and scalable.`,
-        author: `Irisval`
+        author: `Irisval`,
+        blog_id: 18,
         },
     {
         title: `How to use REST services in Angular`,
         slug: `use-rest-services-angular`,
         content: `In this article, we'll guide you through the process of using REST services in your Angular applications. We'll cover everything from setting up your project and making API calls to handling errors and integrating with third-party libraries.\n\nRESTful services are a popular choice for building web applications because they provide a simple, flexible, and lightweight architecture that can be easily scaled and maintained. Angular, as a front-end framework, offers built-in support for making REST API calls using its HttpClient module. This module allows you to interact with RESTful services and retrieve data from them with ease.\n\nWe'll start by discussing what RESTful services are and how they work. We'll then move on to exploring the different ways of making HTTP requests in Angular, including GET, POST, PUT, and DELETE methods. We'll also demonstrate how to handle asynchronous data loading and error handling in Angular applications.\n\nTo make our examples more practical, we'll create a simple Angular application that retrieves data from a mock RESTful API. We'll use this application to demonstrate the different features and techniques that we discuss throughout the article.\n\nOverall, this article is aimed at developers who are familiar with Angular and want to learn how to integrate RESTful services into their applications. By the end of this article, you'll have a good understanding of how to use RESTful services in Angular and be able to apply this knowledge to your own projects.`,
-        author: `Nicobytes`
+        author: `Nicobytes`,
+        blog_id: 19,
         },
     {
         title: `React Native: How to Create Mobile Apps for Android and iOS`,
         slug: `react-native-create-mobile-apps-android-ios`,
         content: `In this tutorial, we will guide you through the process of using React Native to create mobile applications for both Android and iOS. We'll cover the basics of React Native, including its architecture and how it works, and then dive into the steps needed to create your first mobile app. We'll also discuss best practices for developing mobile apps using React Native, including how to optimize your app's performance and user experience.`,
-        author: `santiagredo`
+        author: `santiagredo`,
+        blog_id: 20,
         },
     {
         title: `How to Use RxJS in Angular`,
         slug: `using-rxjs-in-angular`,
         content: `RxJS is a powerful library for reactive programming in Angular that allows developers to easily handle asynchronous data streams. In this article, we will explore the basics of RxJS and show you how to use it in an Angular project. We will cover important topics such as observables, operators, and subscriptions. By the end of this article, you will have a solid understanding of RxJS and be able to use it in your Angular projects with confidence.`,
-        author: `Nicobytes`
+        author: `Nicobytes`,
+        blog_id: 21,
         },
     {
         title: `Creating Reusable Components in Vue.js`,
         slug: `vuejs-creating-reusable-components`,
         content: `Vue.js is a powerful JavaScript framework for building user interfaces. One of its key features is the ability to create reusable components that can be used across multiple projects. In this tutorial, we will walk you through the process of creating reusable components in Vue.js.\n\nFirst, we will discuss the benefits of using reusable components, such as increased productivity and consistency in design. Then, we will show you how to create a simple component in Vue.js, and how to make it reusable by passing in props.\n\nNext, we will explore more advanced techniques for creating reusable components, such as using slots and scoped slots. We will also cover how to create a component library and publish it to NPM.\n\nBy the end of this tutorial, you will have a strong understanding of how to create reusable components in Vue.js, and how to use them to streamline your development process.`,
-        author: `JuanDC`
+        author: `JuanDC`,
+        blog_id: 22,
         },
 ]

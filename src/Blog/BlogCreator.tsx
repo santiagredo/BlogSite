@@ -21,13 +21,14 @@ export function Blog_creator () {
             title: title,
             slug: title.replaceAll(' ', '-'),
             content: content,
-            author: String(auth?.user?.username)
+            author: String(auth?.user?.username),
+            blog_id: blog_data.length + 1 || 0 + 1
         };
 
         console.log(obj);
         blog_data.unshift(obj);
         alert('Blog creado');
-        navigate(`/post/${obj.slug}`);  
+        navigate(`/post/${obj.blog_id}/${obj.slug}`);  
         reset_modal();
     };
     

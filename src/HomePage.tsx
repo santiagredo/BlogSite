@@ -34,7 +34,7 @@ export function Home_Page () {
 
                 return (
                     <div key={ele.slug} className='posts_containers'>
-                        <Link to={`/post/${ele.slug}`}>
+                        <Link to={`/post/${ele.blog_id}/${ele.slug}`}>
                             {ele.title}
                         </Link>
                         <p>{truncated_text}</p>
