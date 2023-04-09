@@ -28,7 +28,12 @@ export function Profiles_generator () {
         } else {
             users.unshift(obj);
             alert('User successfully created');
-            // set_signup_open(false);
+            
+            set_fullname('');
+            set_username('');
+            set_email('');
+            set_role('editor');
+
             console.log(users);
             navigate('/profile');
         };
@@ -42,13 +47,13 @@ export function Profiles_generator () {
 
                 <form onSubmit={handleSubmit}>
                     <label>Full name</label>
-                    <input className="fullname_input" type='text' onChange={(e) => set_fullname(e.target.value)}/>
+                    <input className="fullname_input" type='text' value={fullName} onChange={(e) => set_fullname(e.target.value)}/>
 
                     <label>Username</label>
-                    <input className="username_input" type='text' onChange={(e) => set_username(e.target.value)}/>
+                    <input className="username_input" type='text' value={username} onChange={(e) => set_username(e.target.value)}/>
 
                     <label>Email</label>
-                    <input className="email_input" type='email' onChange={(e) => set_email(e.target.value)}/>
+                    <input className="email_input" type='email' value={email} onChange={(e) => set_email(e.target.value)}/>
 
                     <label>Role</label>
                     <select className="select_role" value={role} onChange={(e) => set_role(e.target.value)}>
