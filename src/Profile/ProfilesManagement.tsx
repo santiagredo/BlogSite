@@ -65,12 +65,12 @@ function Profile_editor (ele: User) {
     };
 
     const update_account = () => {
-        if (users.some(user => user.username === username)) {
+        if (users.some(user => user.username === username && user.user_id !== ele.user_id)) {
             alert('User already exists')
         } else {
             set_edit_profile(false);
             users.find((profile) => {
-                if (profile.username === ele.username) {
+                if (profile.user_id === ele.user_id) {
                     return (
                         profile.fullName = fullName,
                         profile.username = username,
@@ -100,6 +100,7 @@ function Profile_editor (ele: User) {
                     <p>Username: {ele.username} </p>
                     <p>Email: {ele.email} </p>
                     <p>Role: {ele.role} </p>
+                    <p>Id: {ele.user_id}</p>
                     {ele.role !== 'admin' && (
                         <div className="individual_profile_options_buttons_container">
                             <button onClick={() => set_edit_profile(true)}>Edit</button>

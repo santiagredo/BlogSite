@@ -19,7 +19,8 @@ export function Profiles_generator () {
             username: username,
             fullName: fullName,
             email: email,
-            role: role
+            role: role,
+            user_id: users.length + 1 || 0 + 1
         };
         // console.log(obj);
 

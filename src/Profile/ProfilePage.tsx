@@ -75,6 +75,7 @@ export function Profile_page () {
                     <h3>Username: {auth?.user?.username}</h3>
                     <h3>Email: {auth?.user?.email}</h3>
                     <h3>Role: {auth?.user?.role}</h3>
+                    <h3>Id: {auth?.user?.user_id}</h3>
 
                     <div className="profile_options_buttons_container">
                         <button onClick={() => set_edit_profile(true)}>Edit</button>

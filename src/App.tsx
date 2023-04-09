@@ -87,5 +87,5 @@ export default App;
 //Done  12. Hacer que el respectivo boton de paginacion se muestre diferente al estar disabled
 //Done  13. Hacer una página para 404
 //Done  14. Arreglar la creación de usuarios en admin panel, no se boran los camppos al crear usuario
-//  15. Es necesario agregar IDs a los posts y los usuarios, para que pueden modificarse sin errores
+//Done  15. Es necesario agregar IDs a los posts y los usuarios, para que pueden modificarse sin errores
 //  16. Arreglar search, al hacer búsqueda se muestra todo el contenido del post

@@ -26,7 +26,8 @@ export function Signup_page () {
             username: username,
             fullName: fullName,
             email: email,
-            role: 'editor'
+            role: 'editor',
+            user_id: users.length + 1 || 0 + 1
         };
         // console.log(obj);
 

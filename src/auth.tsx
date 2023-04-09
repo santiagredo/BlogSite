@@ -10,56 +10,65 @@ export interface User {
     role: string;
     fullName: string;
     email: string;
+    user_id: number;
 }
   
 export const users: User[] = [
     {
+      user_id: 1,
       username: "Irisval",
       role: "admin",
       fullName: "Irisvaldo Silva",
       email: "irisvaldo.silva@example.com",
     },
     {
+      user_id: 2,
       username: "RetaxMaster",
       role: "admin",
       fullName: "Renato Silva",
       email: "renato.silva@example.com",
     },
     {
+      user_id: 3,
       username: "freddier",
       role: "admin",
       fullName: "Freddie Rojas",
       email: "freddie.rojas@example.com",
     },
     {
+      user_id: 4,
       username: "juanDC",
       role: "editor",
       fullName: "Juan Delgado",
       email: "juan.delgado@example.com",
     },
     {
+      user_id: 5,
       username: "santiagredo",
       role: "admin",
       fullName: "Santiago Agredo",
       email: "santiago.agredo@example.com",
     },
     {
-        username: "mariaG",
-        role: "editor",
-        fullName: "Maria Gonzalez",
-        email: "maria.gonzalez@example.com"
+      user_id: 6,
+      username: "mariaG",
+      role: "editor",
+      fullName: "Maria Gonzalez",
+      email: "maria.gonzalez@example.com",
     },
     {
-        username: "pabloM",
-        role: "editor",
-        fullName: "Pablo Martinez",
-        email: "pablo.martinez@example.com"
+      user_id: 7,
+      username: "pabloM",
+      role: "editor",
+      fullName: "Pablo Martinez",
+      email: "pablo.martinez@example.com",
     },
     {
-        username: "luciaS",
-        role: "editor",
-        fullName: "Lucia Salazar",
-        email: "lucia.salazar@example.com"
+      user_id: 8,
+      username: "luciaS",
+      role: "editor",
+      fullName: "Lucia Salazar",
+      email: "lucia.salazar@example.com",
     }
 ];
   
@@ -98,7 +107,7 @@ export function Auth_provider ({ children }: AuthProviderProps) {
 
     const logout = () => {
         set_user(null);
-        navigate('/');
+        navigate('/home');
     };
 
     const auth = {user, login, logout} as Auth | null ;
