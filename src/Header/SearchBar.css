@@ -20,6 +20,7 @@
     box-sizing: border-box;
     color: var(--vanilla);
     width: 95%;
+    border: 1px solid var(--vanilla);
     border-radius: 4px;
     padding: 0 2%;
 }
