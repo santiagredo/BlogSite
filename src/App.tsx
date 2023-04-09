@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter, Navigate } from 'react-router-dom';
 import { Auth_provider } from './auth';
 import { Header } from './Header/Header';
 import { Home_Page } from './HomePage';
@@ -44,6 +44,7 @@ function App() {
           <Header/>
           
             <Routes>
+              <Route path='/' element={<Navigate to='/home'/>}/>
               <Route path='/home' element={<Home_Page/>}/>
               <Route path='/blog' element={<Blog_page/>}/>
               <Route path='/post/:id/:slug' element={<Blog_post/>}/>
@@ -88,4 +89,3 @@ export default App;
 //Done  13. Hacer una página para 404
 //Done  14. Arreglar la creación de usuarios en admin panel, no se boran los camppos al crear usuario
 //Done  15. Es necesario agregar IDs a los posts y los usuarios, para que pueden modificarse sin errores
-//  16. Arreglar search, al hacer búsqueda se muestra todo el contenido del post
