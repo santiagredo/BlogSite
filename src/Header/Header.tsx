@@ -10,7 +10,7 @@ export function Header () {
 
     return (
         <header className='header_container'>
-            <a key={'/'} onClick={(e) => {navigate('/'), e.preventDefault()}} href="">Home</a>
+            <a key={'/home'} onClick={(e) => {navigate('/home'), e.preventDefault()}} href="">Home</a>
             <Search_bar/>
             <Dropdown_menu/>
         </header>
