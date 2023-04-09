@@ -10,6 +10,7 @@ import { Search_results } from './Header/SearchBar';
 import { Search_provider } from './Header/SearchContext';
 import { Profile_page } from './Profile/ProfilePage';
 import { Login_modal_provider, Logout_modal_provider, Signup_modal_provider } from './Session/ModalContext';
+import { Error } from './Error/Error';
 
 interface Props {
   children: React.ReactNode;
@@ -50,6 +51,7 @@ function App() {
               <Route path='/search/' element={<Home_Page/>}/>
               <Route path='/search/:slug' element={<Search_results/>}/>
               <Route path='/create' element={<Blog_creator/>}/>
+              <Route path='/*' element={<Error/>}/>
             </Routes>
 
         </App_providers>
