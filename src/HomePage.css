@@ -43,6 +43,10 @@
     color: var(--blue);
 }
 
+.pages_button:disabled {
+    background-color: var(--brown);
+}
+
 
 
 
