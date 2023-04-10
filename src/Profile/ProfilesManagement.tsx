@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { use_auth } from "../auth";
 import { users, User } from "../auth";
 import './ProfilesManagement.css';
+import { blog_data } from "../Blog/BlogData";
 
 export function Profiles_management () {
 
@@ -69,6 +70,11 @@ function Profile_editor (ele: User) {
             alert('User already exists')
         } else {
             set_edit_profile(false);
+            blog_data.forEach((post) => {
+                if (post.author === ele.username) {
+                    return post.author = username; 
+                };
+            });
             users.find((profile) => {
                 if (profile.user_id === ele.user_id) {
                     return (
@@ -79,7 +85,7 @@ function Profile_editor (ele: User) {
                     );
                 };
             });
-            console.log(users);
+            // console.log(users);
         };
     };
 

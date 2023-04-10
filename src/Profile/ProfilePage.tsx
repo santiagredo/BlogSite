@@ -4,6 +4,7 @@ import { use_auth, Auth_route, users } from "../auth";
 import { Profiles_management } from "./ProfilesManagement";
 import { Profiles_generator } from "./ProfilesGenerator";
 import './ProfilePage.css';
+import { blog_data } from "../Blog/BlogData";
 
 export function Profile_name () {
     const auth = use_auth();
@@ -37,6 +38,11 @@ export function Profile_page () {
         } else {
             set_edit_profile(false);
             return (
+                blog_data.forEach((ele) => {
+                    if (ele.author === auth!.user!.username) {
+                        return ele.author = username;
+                    };
+                }),
                 auth!.user!.fullName = fullName,
                 auth!.user!.username = username,
                 auth!.user!.email = email
